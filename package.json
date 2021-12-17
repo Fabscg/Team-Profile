@@ -1,0 +1,25 @@
+{
+  "name": "team-profile",
+  "version": "1.0.0",
+  "description": "Team-Profile0generator\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b-G\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabskickass/Team-Profile.git"
+  },
+  "author": "Fabiola C. Gamboa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabskickass/Team-Profile/issues"
+  },
+  "homepage": "https://github.com/Fabskickass/Team-Profile#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
