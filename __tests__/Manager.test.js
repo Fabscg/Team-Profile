@@ -1,4 +1,4 @@
-
+const Employee = require('../lib/Employee')
 const Manager = require('../lib/Manager');
 
 
@@ -12,5 +12,5 @@ test('creates manager object', () => {
 test('gets role of employee', () => {
     const manager = new Manager('Elizabeth', 20, 'elizaschneid@gmail.com', 9);
 
-    expect(manager.getRole()).toEqual("Manager");
+    expect(manager.getRole()).toEqual('Manager');
 }); 
