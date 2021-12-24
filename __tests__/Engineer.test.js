@@ -9,4 +9,3 @@ test('creates engineer object', () => {
    expect(engineer.getGithub()).toEqual('fabskickass')
 })
 
-// engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
