@@ -33,7 +33,7 @@
   none
 
   # License
-    [![License](https://img.shields.io/badge/License--blue.svg)](https://opensource.org/licenses/)
+  [![License](https://img.shields.io/badge/License--blue.svg)](https://opensource.org/licenses/)
   
   # Test
     node index.js
@@ -46,7 +46,7 @@
   ## Name
   Fabiola C. Gamboa
 
-    ## [Github](https://github.com/Fabskickass)
+  ## [Github](https://github.com/Fabskickass)
   
 
-    ## [Email](fabiscg79@gmail.com)
+  ## [Email](fabiscg79@gmail.com)
