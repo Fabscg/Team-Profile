@@ -21,7 +21,7 @@
  
 
   # Description
-    This project is a Team-Profile-Generator for any Company that needs to create good teams with their crew
+This project is a Team-Profile-Generator forany Company that needs to create good teamswith their crew
 
   # Installation
     Inquirer and Jest
@@ -45,7 +45,7 @@
   ## Name
      Fabiola C. Gamboa
 
-    ## [Github](https://github.com/Fabskickass)
+ ## [Github](https://github.com/Fabskickass)
   
 
-    ## [Email](fabiscg79@gmail.com)
+ ## [Email](fabiscg79@gmail.com)
