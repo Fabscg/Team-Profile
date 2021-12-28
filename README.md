@@ -21,10 +21,17 @@
  
 
   # Description
+<<<<<<< HEAD
 This project is a Team-Profile-Generator forany Company that needs to create good teamswith their crew
 
   # Installation
     Inquirer and Jest
+=======
+   This project is a Team-Profile-Generator for any Company that needs to create good teams with their crew
+
+  # Installation
+     Inquirer and Jest
+>>>>>>> f9710175be46bac6571f93aa5b85211fa2bc19c2
 
   # Usage
   You will need to open the terminal, install the mentioned dependecies, also npm. Need to start  with node index.js, and some prompts that you will need to answer will create a index.html page with all the information provided 
@@ -40,7 +47,7 @@ This project is a Team-Profile-Generator forany Company that needs to create goo
   # Questions
   _________________________________
 
-  ## If you have any further questions about this project, you can always contact me here:(Click Enter)
+  ## If you have any further questions about this project, you can always contact me here:
 
   ## Name
      Fabiola C. Gamboa
@@ -48,4 +55,8 @@ This project is a Team-Profile-Generator forany Company that needs to create goo
  ## [Github](https://github.com/Fabskickass)
   
 
+<<<<<<< HEAD
  ## [Email](fabiscg79@gmail.com)
+=======
+  ## [Email](fabiscg79@gmail.com)
+>>>>>>> f9710175be46bac6571f93aa5b85211fa2bc19c2
