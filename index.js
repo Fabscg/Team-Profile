@@ -135,7 +135,9 @@ function createIntern() {
 }
 
 function createTeam() {
-    // fs.writeFile('team.html', template(team), 'utf-8', err => err ? console.log(err) : console.log('HTML has been created'));
+ 
+    fs.writeFile('team.html', template(team), 'utf-8', err => err ? console.log(err) : console.log('HTML has been created'));
     console.log(team)
 }
+
 

@@ -27,7 +27,7 @@ This project is a Team-Profile-Generator forany Company that needs to create goo
     Inquirer and Jest
 
   # Usage
-  You will need to open the terminal, install the   mentioned dependecies, also npm. Need to start   with node index.js, and some prompts that you will need to answer will create a index.html page with all the information provided 
+  You will need to open the terminal, install the mentioned dependecies, also npm. Need to start  with node index.js, and some prompts that you will need to answer will create a index.html page with all the information provided 
   # Credits
   none
 

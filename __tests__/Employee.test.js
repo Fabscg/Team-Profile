@@ -5,7 +5,7 @@ test('Creates Employee object', () => {
 
     expect(employee.getName()).toEqual('Angela')
     expect(employee.getId()).toEqual('14')
-    expect(employee.getEmail()).toEqual('schmang@gmail.com')
+    expect(employee.getEmail()).toEqual('test@testing.com')
 });
 
 

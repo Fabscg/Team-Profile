@@ -5,14 +5,14 @@ const createAll = team => {
   const makeManager = manager => {
     return `
         <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${manager.manageName}</div>
+        <div class="card-header">${manager.getName()}</div>
         <div class="card-body">
           <h5 class="card-title"><i class="fas fa-mug-hot"></i>Manager</h5>
         </div>
         <div class='card-body'>
-        <p>ID:${manager.managerId}</p>
-        <p>Email: <a href="mailto:${manager.managerEmail}"></a> ${manager.managerEmail}</p>
-        <p>Office Number:${manager.managerOffice}</p>
+        <p>ID:${manager.getId()}</p>
+        <p>Email: <a href="mailto:${manager.getEmail()}"></a> ${manager.getEmail()}</p>
+        <p>Office Number:${manager.getOfficeNumber()}</p>
         </div>
       </div>
         `
@@ -21,14 +21,14 @@ const createAll = team => {
   const makeIntern = intern => {
     return `
         <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${intern.internName}</div>
+        <div class="card-header">${intern.getName()}</div>
         <div class="card-body">
           <h5 class="card-title"><i class="fas fa-user-graduate"></i></i>Intern</h5>
         </div>
         <div class='card-body'>
-        <p>ID:${answers.internId}</p>
-        <p>Email:<a href="mailto:${intern.internEmail}"></a></p>
-        <p>School:${intern.school}</p>
+        <p>ID:${intern.getId()}</p>
+        <p>Email:<a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
+        <p>School:${intern.getSchool()}</p>
         </div>
       </div>
         `
@@ -37,52 +37,33 @@ const createAll = team => {
   const makeEngineer = engineer => {
     return `
         <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${engineer.engineerName}</div>
+        <div class="card-header">${engineer.getName()}</div>
         <div class="card-body">
-          <h5 class="card-title"><i class="fas fa-glasses"></i></i>Intern</h5>
+          <h5 class="card-title"><i class="fas fa-glasses"></i></i>Engineer</h5>
         </div>
         <div class='card-body'>
-        <p>${engineer.engineerId}</p>
-        <p>${engineer.engineerEmail}</p>
-        <p><a href="https://github.com/${engineer.github}"></a>${engineer.github}</p>
+        <p>ID: ${engineer.getId()}</p>
+        <p>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
+        <p>GitHub: <a href="https://github.com/${engineer.getGithub()}"></a>${engineer.getGithub()}</p>
         </div>
       </div>
         `
   }
-  team = data => {
-    pageArray = []
-  
-    for(var i = 0; i < data.length; i++){
-        const employee = data[i]
-        const role = employee.getRole()
-  
-        if(role === 'Manager'){
-            const managerCard = makeManager(employee)
-  
-            pageArray.push(managerCard)
-        }
-  
-        if(role === 'Engineer'){
-            const engineerCard = makeEngineer(employee)
-            pageArray.push(engineerCard);
-        }
-        if(role === 'Intern'){
-            const internCard = makeIntern(employee)
-            pageArray.push(internCard)
-        }
-    }
 
-    const teamCards = pageArray.join(' ')
+    const pageArray = []
 
-    const generateTeam = generateTeamPage(teamCards)
-    return generateTeam
-  }
+    pageArray.push(team.filter(item => item.getRole() === "Manager").map(manager => makeManager(manager)))
+    pageArray.push(team.filter(item => item.getRole() === "Engineer").map(engineer => makeEngineer(engineer)))
+    pageArray.push(team.filter(item => item.getRole() === "Intern").map(intern => makeIntern(intern)))
+
+    return pageArray.join("")
 
 }
 
 
 
 module.exports = team => {
+
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -105,7 +86,5 @@ module.exports = team => {
     <script src="index.js"></script>
     </html>
     `
+    
 }
-
-
-module.exports = createAll
