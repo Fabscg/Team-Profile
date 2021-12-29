@@ -1,5 +1,7 @@
+//Importing the engineer file for testing
 const Engineer = require('../lib/Engineer')
 
+//creating the enginner object for the test
 test('creates engineer object', () => {
     const engineer = new Engineer('Fabiola', '07', 'fabiscg79@gmail.com', 'fabskickass') 
 

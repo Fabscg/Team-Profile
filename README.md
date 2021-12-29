@@ -56,5 +56,5 @@ This project is a Team-Profile-Generator forany Company that needs to create goo
 
  #
 
-![Team Profile Image](images/team-profile.png)
+![Team Profile Image](./images/team-profile.png)
 

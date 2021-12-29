@@ -1,4 +1,7 @@
+
+//we require 'inquire' dependency to be able to ask questions to the user
 const inquirer = require('inquirer')
+// global variables with the user to create a team
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
@@ -7,8 +10,9 @@ const template = require('./src/page-template')
 
 const team = []
 const idArray = []
-
+//inquirer help us to  see the questions in the console
 inquirer
+//creates the questions for the manager
     .prompt([
         {
             type: 'input',
@@ -27,6 +31,7 @@ inquirer
             type: 'input',
             name: 'managerId',
             message: 'What is your Managers ID number?(Required)',
+            //validates the id number in this question, if the user type a number, true will be accepted, and if not, the user will have a message in the screen that it need the number, that is required
             validate: idNumber => {
                 if (idNumber) {
                     return true
@@ -46,6 +51,7 @@ inquirer
             name: 'managerOffice',
             message: 'What is your managers office number?'
         }
+        //the 'then' method is a chain that help us to connect the functions, in this case the answers from the manager will be display
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice)
         team.push(manager)

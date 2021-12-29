@@ -1,7 +1,9 @@
+//we require 'fs' dependency, to be able to create an html file from this one
 const { fs } = require("fs")
 
+//we create a function that will be call to create the 'html file'
 const createAll = team => {
-
+//we have the arrow functions which will create the manager html file, in this case a card
   const makeManager = manager => {
     return `
         <div class="col-4 mt-4 card text-dark bg-ligth mb-3" style="max-width: 18rem;">
@@ -17,7 +19,7 @@ const createAll = team => {
       </div>
         `
   }
-
+//we create an arrow function  which will create the Intern 'html file' card
   const makeIntern = intern => {
     return `
         <div class="col-4 mt-4 card text-dark bg-light mb-3" style="max-width: 18rem;">
@@ -49,7 +51,7 @@ const createAll = team => {
       </div>
         `
   }
-
+//a variable with an array that will hold all our team cards information after the user answer the prompt
   const pageArray = []
 
   pageArray.push(team.filter(item => item.getRole() === "Manager").map(manager => makeManager(manager)))
