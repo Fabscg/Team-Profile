@@ -4,7 +4,7 @@ const createAll = team => {
 
   const makeManager = manager => {
     return `
-        <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="col-4 mt-4 card text-dark bg-ligth mb-3" style="max-width: 18rem;">
         <div class="card-header">${manager.getName()}</div>
         <div class="card-body">
           <h5 class="card-title"><i class="fas fa-mug-hot"></i>Manager</h5>
@@ -20,7 +20,7 @@ const createAll = team => {
 
   const makeIntern = intern => {
     return `
-        <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="col-4 mt-4 card text-dark bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">${intern.getName()}</div>
         <div class="card-body">
           <h5 class="card-title"><i class="fas fa-user-graduate"></i></i>Intern</h5>
@@ -28,7 +28,7 @@ const createAll = team => {
         <div class='card-body'>
         <p>ID:${intern.getId()}</p>
         <p>Email:<a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
-        <p>School:${intern.getSchool()}</p>
+        <p>School: ${intern.getSchool()}</p>
         </div>
       </div>
         `
@@ -36,7 +36,7 @@ const createAll = team => {
 
   const makeEngineer = engineer => {
     return `
-        <div class="col-lg-4 card text-white bg-secondary mb-3" style="max-width: 18rem;">
+        <div class="col-4 mt-4  card text-dark bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">${engineer.getName()}</div>
         <div class="card-body">
           <h5 class="card-title"><i class="fas fa-glasses"></i></i>Engineer</h5>
@@ -50,13 +50,13 @@ const createAll = team => {
         `
   }
 
-    const pageArray = []
+  const pageArray = []
 
-    pageArray.push(team.filter(item => item.getRole() === "Manager").map(manager => makeManager(manager)))
-    pageArray.push(team.filter(item => item.getRole() === "Engineer").map(engineer => makeEngineer(engineer)))
-    pageArray.push(team.filter(item => item.getRole() === "Intern").map(intern => makeIntern(intern)))
+  pageArray.push(team.filter(item => item.getRole() === "Manager").map(manager => makeManager(manager)))
+  pageArray.push(team.filter(item => item.getRole() === "Engineer").map(engineer => makeEngineer(engineer)))
+  pageArray.push(team.filter(item => item.getRole() === "Intern").map(intern => makeIntern(intern)))
 
-    return pageArray.join("")
+  return pageArray.join("")
 
 }
 
@@ -74,17 +74,22 @@ module.exports = team => {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/4cf7e7bf8a.js" crossorigin="anonymous"></script>
         <title>Team-Profile</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
     </head>
     <body>
-        <header class='jumbotron justify-content-center bg-secondary text-light'>
+        <header class='jumbotron text-center flex-row  bg-secondary text-light'>
             <h1>My Team</h1>
         </header>
-        <div class='card-body'>
+       <div class='container'>
+        <div class='card-body row justify-content-center'>
             ${createAll(team)}
         </div>
+       </div>
     </body>
     <script src="index.js"></script>
     </html>
     `
-    
+
 }
