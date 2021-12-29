@@ -52,7 +52,7 @@ This project is a Team-Profile-Generator forany Company that needs to create goo
 
  ## [Github](https://github.com/Fabskickass)
   
- ## [Email](fabiscg79@gmail.com)
+ ## [Email](mailto:fabiscg79@gmail.com)
 
  #
 
